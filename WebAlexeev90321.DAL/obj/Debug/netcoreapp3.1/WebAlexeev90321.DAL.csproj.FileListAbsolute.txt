@@ -6,3 +6,4 @@ D:\develop\WebAlexeev90321\WebAlexeev90321.DAL\obj\Debug\netcoreapp3.1\WebAlexee
 D:\develop\WebAlexeev90321\WebAlexeev90321.DAL\obj\Debug\netcoreapp3.1\WebAlexeev90321.DAL.csproj.CoreCompileInputs.cache
 D:\develop\WebAlexeev90321\WebAlexeev90321.DAL\obj\Debug\netcoreapp3.1\WebAlexeev90321.DAL.dll
 D:\develop\WebAlexeev90321\WebAlexeev90321.DAL\obj\Debug\netcoreapp3.1\WebAlexeev90321.DAL.pdb
+d:\develop\WebAlexeev90321\WebAlexeev90321.DAL\obj\Debug\netcoreapp3.1\WebAlexeev90321.DAL.csprojAssemblyReference.cache

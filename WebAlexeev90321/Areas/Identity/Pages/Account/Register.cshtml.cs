@@ -14,6 +14,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
 using WebAlexeev90321.DAL.Entities;
+using Microsoft.AspNetCore.Http;
 
 namespace WebAlexeev90321.Areas.Identity.Pages.Account
 {
@@ -56,11 +57,13 @@ namespace WebAlexeev90321.Areas.Identity.Pages.Account
             [DataType(DataType.Password)]
             [Display(Name = "Password")]
             public string Password { get; set; }
+            public IFormFile Avatar { get; set; }
 
             [DataType(DataType.Password)]
             [Display(Name = "Confirm password")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
+            
         }
 
         public async Task OnGetAsync(string returnUrl = null)
@@ -76,6 +79,17 @@ namespace WebAlexeev90321.Areas.Identity.Pages.Account
             if (ModelState.IsValid)
             {
                 var user = new ApplicationUser { UserName = Input.Email, Email = Input.Email };
+                if (Input.Avatar != null)
+                {
+                    user.AvatarImage = new byte[(int)Input.Avatar.Length];
+                    await Input.Avatar
+                    .OpenReadStream()
+                    .ReadAsync(
+                    user.AvatarImage,
+                    0,
+                    (int)Input.Avatar.Length);
+                }
+
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {
