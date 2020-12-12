@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\develop\\WebAlexeev90321\\WebAlexeev90321\\WebAlexeev90321.csproj": {}
+    "D:\\develop\\WebAlexeev90321\\WebAlexeev90321\\WebAlexeev90321.csproj": {}
   },
   "projects": {
-    "d:\\develop\\WebAlexeev90321\\WebAlexeev90321.DAL\\WebAlexeev90321.DAL.csproj": {
+    "D:\\develop\\WebAlexeev90321\\WebAlexeev90321.DAL\\WebAlexeev90321.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\develop\\WebAlexeev90321\\WebAlexeev90321.DAL\\WebAlexeev90321.DAL.csproj",
+        "projectUniqueName": "D:\\develop\\WebAlexeev90321\\WebAlexeev90321.DAL\\WebAlexeev90321.DAL.csproj",
         "projectName": "WebAlexeev90321.DAL",
-        "projectPath": "d:\\develop\\WebAlexeev90321\\WebAlexeev90321.DAL\\WebAlexeev90321.DAL.csproj",
+        "projectPath": "D:\\develop\\WebAlexeev90321\\WebAlexeev90321.DAL\\WebAlexeev90321.DAL.csproj",
         "packagesPath": "C:\\Users\\yrasi\\.nuget\\packages\\",
-        "outputPath": "d:\\develop\\WebAlexeev90321\\WebAlexeev90321.DAL\\obj\\",
+        "outputPath": "D:\\develop\\WebAlexeev90321\\WebAlexeev90321.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\yrasi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -68,14 +68,14 @@
         }
       }
     },
-    "d:\\develop\\WebAlexeev90321\\WebAlexeev90321\\WebAlexeev90321.csproj": {
+    "D:\\develop\\WebAlexeev90321\\WebAlexeev90321\\WebAlexeev90321.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\develop\\WebAlexeev90321\\WebAlexeev90321\\WebAlexeev90321.csproj",
+        "projectUniqueName": "D:\\develop\\WebAlexeev90321\\WebAlexeev90321\\WebAlexeev90321.csproj",
         "projectName": "WebAlexeev90321",
-        "projectPath": "d:\\develop\\WebAlexeev90321\\WebAlexeev90321\\WebAlexeev90321.csproj",
+        "projectPath": "D:\\develop\\WebAlexeev90321\\WebAlexeev90321\\WebAlexeev90321.csproj",
         "packagesPath": "C:\\Users\\yrasi\\.nuget\\packages\\",
-        "outputPath": "d:\\develop\\WebAlexeev90321\\WebAlexeev90321\\obj\\",
+        "outputPath": "D:\\develop\\WebAlexeev90321\\WebAlexeev90321\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\yrasi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -92,8 +92,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "d:\\develop\\WebAlexeev90321\\WebAlexeev90321.DAL\\WebAlexeev90321.DAL.csproj": {
-                "projectPath": "d:\\develop\\WebAlexeev90321\\WebAlexeev90321.DAL\\WebAlexeev90321.DAL.csproj"
+              "D:\\develop\\WebAlexeev90321\\WebAlexeev90321.DAL\\WebAlexeev90321.DAL.csproj": {
+                "projectPath": "D:\\develop\\WebAlexeev90321\\WebAlexeev90321.DAL\\WebAlexeev90321.DAL.csproj"
               }
             }
           }
