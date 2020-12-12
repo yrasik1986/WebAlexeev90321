@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAlexeev90321", "WebAlexeev90321\WebAlexeev90321.csproj", "{26083D12-1255-4022-AA72-2564726378D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAlexeev90321.DAL", "WebAlexeev90321.DAL\WebAlexeev90321.DAL.csproj", "{13A0791D-9ACB-45E3-B32F-D84C22A58678}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{26083D12-1255-4022-AA72-2564726378D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26083D12-1255-4022-AA72-2564726378D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26083D12-1255-4022-AA72-2564726378D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26083D12-1255-4022-AA72-2564726378D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13A0791D-9ACB-45E3-B32F-D84C22A58678}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13A0791D-9ACB-45E3-B32F-D84C22A58678}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13A0791D-9ACB-45E3-B32F-D84C22A58678}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13A0791D-9ACB-45E3-B32F-D84C22A58678}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8258703D-D02E-421E-A7A0-6C46A280600D}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,100 @@
+﻿
+@{
+    ViewBag.Title = "Главная страница";
+}
+
+<h2>@ViewData["Text"]</h2>
+
+<!--Содержимое страницы-->
+<!--Список-->
+<div class="col-md-9">
+    <div class="container">
+        <h2>Список</h2>
+        <ol type="A">
+            @for (int i = 1; i < 5; i++)
+            {
+                <li>элемент @i списка</li>
+            }
+        </ol>
+    </div>
+</div>
+<hr>  <!--Горизонтальный разделитель-->
+<!--Форма-->
+<div class="container">
+    <h2>Форма</h2>
+    <select asp-items="@ViewData["Lst"] as SelectList"></select>
+    <form class="form-horizontal" method="post">
+        <!-- Группа чек-боксов -->
+        <div class=" row">
+            <div class="col-md-2"> </div>
+            <div class="col-md-offset-2 col-md-8">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="ch1" value="ch1"> Чек-бокс 1
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="ch2" value="ch2"> Чек-бокс 2
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!-- Группа радио-кнопок -->
+        <div class=" row">
+            <div class="col-md-2"> </div>
+            <div class="col-md-offset-2 col-md-8">
+                <label class="radio-inline">
+                    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked> Радио-1
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Радио-2
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> Радио-3
+                </label>
+            </div>
+        </div>
+
+
+        <!-- Группа Логин/Пароль -->
+        <!--<div class="form-group row">
+            <label for="inputLogin" class="col-md-4 col-form-label">Логин</label>
+            <div class="col-md-10">
+                <input type="text" name="login" class="form-control" id="inputLogin" placeholder="Введите логин">
+            </div>
+        </div>-->
+
+
+
+        <div class=" row">
+            <div class="col-md-2">
+                <label for="inputLogin" class="col-md-4 control-label">Логин</label>
+            </div>
+            <div class="col-md-10">
+                <input type="text" class="form-control" id="inputLogin" placeholder="Введите логин">
+            </div>
+        </div>
+
+        <div class=" row">
+
+        </div>
+
+
+
+        <div class=" row">
+            <div class="col-md-2">
+                <label for="inputPassword" class="col-md-2 control-label">Пароль</label>
+            </div>
+            <div class="col-md-10">
+                <input type="password" name="password" class="form-control" id="inputPassword" placeholder="Введите пароль">
+            </div>
+        </div>
+
+        <!-- Кнопка отправить -->
+        <div class="col-md-offset-2 col-md-10">
+            <button type="submit" class="btn btn-success bg-info">Отправить</button>
+        </div>
+    </form>
+</div>
+
