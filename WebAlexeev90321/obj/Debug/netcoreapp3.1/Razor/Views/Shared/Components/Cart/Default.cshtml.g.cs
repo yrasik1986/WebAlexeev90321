@@ -26,8 +26,15 @@ using WebAlexeev90321.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "d:\develop\WebAlexeev90321\WebAlexeev90321\Views\_ViewImports.cshtml"
+using WebAlexeev90321.DAL.Entities;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"be12adc21c397267da15fa8646b1327c41ec306e", @"/Views/Shared/Components/Cart/Default.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a1a62b62af89159a57d8f5cdbd2d297fa3a2c0b9", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"1df971fd2f7b546183b8f2e9b3a34e290d32b89a", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_Components_Cart_Default : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-controller", "Cart", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -58,7 +65,7 @@ using WebAlexeev90321.Models;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             WriteLiteral("\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "be12adc21c397267da15fa8646b1327c41ec306e4099", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "be12adc21c397267da15fa8646b1327c41ec306e4285", async() => {
                 WriteLiteral("\r\n    00,0 руб <i class=\"fas fa-shopping-cart nav-color\"></i> (0)\r\n");
             }
             );
