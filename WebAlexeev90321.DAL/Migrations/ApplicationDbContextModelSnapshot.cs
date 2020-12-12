@@ -15,7 +15,7 @@ namespace WebAlexeev90321.DAL.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.8")
+                .HasAnnotation("ProductVersion", "3.1.10")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -157,6 +157,9 @@ namespace WebAlexeev90321.DAL.Migrations
 
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
+
+                    b.Property<byte[]>("AvatarImage")
+                        .HasColumnType("varbinary(max)");
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
