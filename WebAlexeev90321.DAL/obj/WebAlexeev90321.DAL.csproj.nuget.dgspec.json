@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\develop\\WebAlexeev90321\\WebAlexeev90321.DAL\\WebAlexeev90321.DAL.csproj": {}
+    "d:\\develop\\WebAlexeev90321\\WebAlexeev90321.DAL\\WebAlexeev90321.DAL.csproj": {}
   },
   "projects": {
-    "D:\\develop\\WebAlexeev90321\\WebAlexeev90321.DAL\\WebAlexeev90321.DAL.csproj": {
+    "d:\\develop\\WebAlexeev90321\\WebAlexeev90321.DAL\\WebAlexeev90321.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\develop\\WebAlexeev90321\\WebAlexeev90321.DAL\\WebAlexeev90321.DAL.csproj",
+        "projectUniqueName": "d:\\develop\\WebAlexeev90321\\WebAlexeev90321.DAL\\WebAlexeev90321.DAL.csproj",
         "projectName": "WebAlexeev90321.DAL",
-        "projectPath": "D:\\develop\\WebAlexeev90321\\WebAlexeev90321.DAL\\WebAlexeev90321.DAL.csproj",
+        "projectPath": "d:\\develop\\WebAlexeev90321\\WebAlexeev90321.DAL\\WebAlexeev90321.DAL.csproj",
         "packagesPath": "C:\\Users\\yrasi\\.nuget\\packages\\",
-        "outputPath": "D:\\develop\\WebAlexeev90321\\WebAlexeev90321.DAL\\obj\\",
+        "outputPath": "d:\\develop\\WebAlexeev90321\\WebAlexeev90321.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\yrasi\\AppData\\Roaming\\NuGet\\NuGet.Config",

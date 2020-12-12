@@ -20,4 +20,8 @@
     <ProjectReference Include="..\WebAlexeev90321.DAL\WebAlexeev90321.DAL.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\Images\" />
+  </ItemGroup>
+
 </Project>

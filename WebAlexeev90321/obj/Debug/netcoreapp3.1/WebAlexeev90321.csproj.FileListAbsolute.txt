@@ -1,11 +1,3 @@
-d:\develop\WebAlexeev90321\WebAlexeev90321\obj\Debug\netcoreapp3.1\WebAlexeev90321.csprojAssemblyReference.cache
-d:\develop\WebAlexeev90321\WebAlexeev90321\obj\Debug\netcoreapp3.1\WebAlexeev90321.AssemblyInfoInputs.cache
-d:\develop\WebAlexeev90321\WebAlexeev90321\obj\Debug\netcoreapp3.1\WebAlexeev90321.AssemblyInfo.cs
-d:\develop\WebAlexeev90321\WebAlexeev90321\obj\Debug\netcoreapp3.1\WebAlexeev90321.csproj.CoreCompileInputs.cache
-d:\develop\WebAlexeev90321\WebAlexeev90321\obj\Debug\netcoreapp3.1\WebAlexeev90321.MvcApplicationPartsAssemblyInfo.cs
-d:\develop\WebAlexeev90321\WebAlexeev90321\obj\Debug\netcoreapp3.1\WebAlexeev90321.MvcApplicationPartsAssemblyInfo.cache
-d:\develop\WebAlexeev90321\WebAlexeev90321\obj\Debug\netcoreapp3.1\WebAlexeev90321.RazorAssemblyInfo.cache
-d:\develop\WebAlexeev90321\WebAlexeev90321\obj\Debug\netcoreapp3.1\WebAlexeev90321.RazorAssemblyInfo.cs
 d:\develop\WebAlexeev90321\WebAlexeev90321\bin\Debug\netcoreapp3.1\appsettings.Development.json
 d:\develop\WebAlexeev90321\WebAlexeev90321\bin\Debug\netcoreapp3.1\appsettings.json
 d:\develop\WebAlexeev90321\WebAlexeev90321\bin\Debug\netcoreapp3.1\libman.json
@@ -143,6 +135,14 @@ d:\develop\WebAlexeev90321\WebAlexeev90321\bin\Debug\netcoreapp3.1\runtimes\win\
 d:\develop\WebAlexeev90321\WebAlexeev90321\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 d:\develop\WebAlexeev90321\WebAlexeev90321\bin\Debug\netcoreapp3.1\WebAlexeev90321.DAL.dll
 d:\develop\WebAlexeev90321\WebAlexeev90321\bin\Debug\netcoreapp3.1\WebAlexeev90321.DAL.pdb
+d:\develop\WebAlexeev90321\WebAlexeev90321\obj\Debug\netcoreapp3.1\WebAlexeev90321.csprojAssemblyReference.cache
+d:\develop\WebAlexeev90321\WebAlexeev90321\obj\Debug\netcoreapp3.1\WebAlexeev90321.AssemblyInfoInputs.cache
+d:\develop\WebAlexeev90321\WebAlexeev90321\obj\Debug\netcoreapp3.1\WebAlexeev90321.AssemblyInfo.cs
+d:\develop\WebAlexeev90321\WebAlexeev90321\obj\Debug\netcoreapp3.1\WebAlexeev90321.csproj.CoreCompileInputs.cache
+d:\develop\WebAlexeev90321\WebAlexeev90321\obj\Debug\netcoreapp3.1\WebAlexeev90321.MvcApplicationPartsAssemblyInfo.cs
+d:\develop\WebAlexeev90321\WebAlexeev90321\obj\Debug\netcoreapp3.1\WebAlexeev90321.MvcApplicationPartsAssemblyInfo.cache
+d:\develop\WebAlexeev90321\WebAlexeev90321\obj\Debug\netcoreapp3.1\WebAlexeev90321.RazorAssemblyInfo.cache
+d:\develop\WebAlexeev90321\WebAlexeev90321\obj\Debug\netcoreapp3.1\WebAlexeev90321.RazorAssemblyInfo.cs
 d:\develop\WebAlexeev90321\WebAlexeev90321\obj\Debug\netcoreapp3.1\staticwebassets\WebAlexeev90321.StaticWebAssets.Manifest.cache
 d:\develop\WebAlexeev90321\WebAlexeev90321\obj\Debug\netcoreapp3.1\staticwebassets\WebAlexeev90321.StaticWebAssets.xml
 d:\develop\WebAlexeev90321\WebAlexeev90321\obj\Debug\netcoreapp3.1\scopedcss\bundle\WebAlexeev90321.styles.css
@@ -157,6 +157,8 @@ d:\develop\WebAlexeev90321\WebAlexeev90321\obj\Debug\netcoreapp3.1\Razor\Areas\I
 d:\develop\WebAlexeev90321\WebAlexeev90321\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
 d:\develop\WebAlexeev90321\WebAlexeev90321\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
 d:\develop\WebAlexeev90321\WebAlexeev90321\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+d:\develop\WebAlexeev90321\WebAlexeev90321\obj\Debug\netcoreapp3.1\Razor\Views\Product\Index.cshtml.g.cs
+d:\develop\WebAlexeev90321\WebAlexeev90321\obj\Debug\netcoreapp3.1\Razor\Views\Product\_ListItemPartial.cshtml.g.cs
 d:\develop\WebAlexeev90321\WebAlexeev90321\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Cart\Default.cshtml.g.cs
 d:\develop\WebAlexeev90321\WebAlexeev90321\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Menu\Default.cshtml.g.cs
 d:\develop\WebAlexeev90321\WebAlexeev90321\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
@@ -173,4 +175,3 @@ d:\develop\WebAlexeev90321\WebAlexeev90321\obj\Debug\netcoreapp3.1\WebAlexeev903
 d:\develop\WebAlexeev90321\WebAlexeev90321\obj\Debug\netcoreapp3.1\WebAlexeev90321.dll
 d:\develop\WebAlexeev90321\WebAlexeev90321\obj\Debug\netcoreapp3.1\WebAlexeev90321.pdb
 d:\develop\WebAlexeev90321\WebAlexeev90321\obj\Debug\netcoreapp3.1\WebAlexeev90321.genruntimeconfig.cache
-d:\develop\WebAlexeev90321\WebAlexeev90321\obj\Debug\netcoreapp3.1\Razor\Views\Product\Index.cshtml.g.cs
