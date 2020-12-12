@@ -26,8 +26,15 @@ using WebAlexeev90321.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "d:\develop\WebAlexeev90321\WebAlexeev90321\Views\_ViewImports.cshtml"
+using WebAlexeev90321.DAL.Entities;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d6a5625cc8fb4476f348b0fe9041c550465d8bf9", @"/Views/Shared/Error.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a1a62b62af89159a57d8f5cdbd2d297fa3a2c0b9", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"1df971fd2f7b546183b8f2e9b3a34e290d32b89a", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_Error : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<ErrorViewModel>
     {
         #pragma warning disable 1998

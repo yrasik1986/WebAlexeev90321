@@ -26,8 +26,15 @@ using WebAlexeev90321.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "d:\develop\WebAlexeev90321\WebAlexeev90321\Views\_ViewImports.cshtml"
+using WebAlexeev90321.DAL.Entities;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d3217267ec1525a91fb64e5f7cfd72bc1101e74d", @"/Views/Home/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a1a62b62af89159a57d8f5cdbd2d297fa3a2c0b9", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"1df971fd2f7b546183b8f2e9b3a34e290d32b89a", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("form-horizontal"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -101,7 +108,7 @@ Write(ViewData["Text"]);
 #line hidden
 #nullable disable
             WriteLiteral("        </ol>\r\n    </div>\r\n</div>\r\n<hr>  <!--Горизонтальный разделитель-->\r\n<!--Форма-->\r\n<div class=\"container\">\r\n    <h2>Форма</h2>\r\n    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d3217267ec1525a91fb64e5f7cfd72bc1101e74d5422", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d3217267ec1525a91fb64e5f7cfd72bc1101e74d5608", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_TagHelpers_SelectTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.SelectTagHelper>();
@@ -122,7 +129,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_SelectTagHelper.Items = ViewData["Lst"] as
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d3217267ec1525a91fb64e5f7cfd72bc1101e74d6807", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d3217267ec1525a91fb64e5f7cfd72bc1101e74d6993", async() => {
                 WriteLiteral(@"
         <!-- Группа чек-боксов -->
         <div class="" row"">
