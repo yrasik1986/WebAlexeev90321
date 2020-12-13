@@ -1,52 +1,1 @@
-﻿@page
-@model WebAlexeev90321.Areas.Admin.Pages.EditModel
-
-@{
-    ViewData["Title"] = "Edit";
-}
-
-<h1>Edit</h1>
-
-<h4>RadioComponent</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="RadioComponent.RadioComponentId" />
-            <div class="form-group">
-                <label asp-for="RadioComponent.RadioComponentName" class="control-label"></label>
-                <input asp-for="RadioComponent.RadioComponentName" class="form-control" />
-                <span asp-validation-for="RadioComponent.RadioComponentName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="RadioComponent.Description" class="control-label"></label>
-                <input asp-for="RadioComponent.Description" class="form-control" />
-                <span asp-validation-for="RadioComponent.Description" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="RadioComponent.Price" class="control-label"></label>
-                <input asp-for="RadioComponent.Price" class="form-control" />
-                <span asp-validation-for="RadioComponent.Price" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="RadioComponent.Image" class="control-label"></label>
-                <input asp-for="RadioComponent.Image" class="form-control" />
-                <span asp-validation-for="RadioComponent.Image" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="RadioComponent.RadioComponentGroupId" class="control-label"></label>
-                <select asp-for="RadioComponent.RadioComponentGroupId" class="form-control" asp-items="ViewBag.RadioComponentGroupId"></select>
-                <span asp-validation-for="RadioComponent.RadioComponentGroupId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
-</div>
-
-<div>
-    <a asp-page="./Index">Back to List</a>
-</div>
-
+﻿@page "{id:int}"@model WebAlexeev90321.Areas.Admin.Pages.EditModel@{ ViewData["Title"] = "Edit";}<h1>Edit</h1><h4>RadioComponent</h4><hr /><div class="row">    <div class="col-md-4"enctype="multipart/form-data">        <form method="post">            <div asp-validation-summary="ModelOnly" class="text-danger"></div>            <input type="hidden" asp-for="RadioComponent.RadioComponentId" />            <div class="form-group">                @if (!string.IsNullOrEmpty(Model.RadioComponent.Image))                {                    <img src=~/images/@Model.RadioComponent.Image alt="NoSuchFile" width="50" />                }                else                {                    <h4>Файл изображения не задан.</h4>                }                <div class=" custom-file mt-3">                    <input type="file" asp-for="Image" class="custom-file-input" id="customFile" />                    <label class="custom-file-label" for="customFile">Выберите файл</label>                </div>            </div>            <div class="form-group">                <label asp-for="RadioComponent.RadioComponentName" class="control-label"></label>                <input asp-for="RadioComponent.RadioComponentName" class="form-control" />                <span asp-validation-for="RadioComponent.RadioComponentName" class="text-danger"></span>            </div>            <div class="form-group">                <label asp-for="RadioComponent.Description" class="control-label"></label>                <input asp-for="RadioComponent.Description" class="form-control" />                <span asp-validation-for="RadioComponent.Description" class="text-danger"></span>            </div>            <div class="form-group">                <label asp-for="RadioComponent.Price" class="control-label"></label>                <input asp-for="RadioComponent.Price" class="form-control" />                <span asp-validation-for="RadioComponent.Price" class="text-danger"></span>            </div>            <div class="form-group">                <label asp-for="RadioComponent.Image" class="control-label"></label>                <input asp-for="RadioComponent.Image" class="form-control" />                <span asp-validation-for="RadioComponent.Image" class="text-danger"></span>            </div>            <div class="form-group">                <label asp-for="RadioComponent.RadioComponentGroupId" class="control-label"></label>                <select asp-for="RadioComponent.RadioComponentGroupId" class="form-control" asp-items="ViewBag.RadioComponentGroupId"></select>                <span asp-validation-for="RadioComponent.RadioComponentGroupId" class="text-danger"></span>            </div>            <div class="form-group">                <input type="submit" value="Save" class="btn btn-primary" />            </div>        </form>    </div></div><div>    <a asp-page="./Index">Back to List</a></div>@section Scripts{    <script src="~/js/bs-custom-file-input.js"></script>    <script>        bsCustomFileInput.init();    </script>}

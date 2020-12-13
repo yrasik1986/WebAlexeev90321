@@ -11,7 +11,7 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form method="post">
+        <form method="post" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="RadioComponent.RadioComponentName" class="control-label"></label>
@@ -30,12 +30,14 @@
             </div>
             <div class="form-group">
                 <label asp-for="RadioComponent.Image" class="control-label"></label>
-                <input asp-for="RadioComponent.Image" class="form-control" />
-                <span asp-validation-for="RadioComponent.Image" class="text-danger"></span>
+                <div class=" custom-file mt-3">
+                    <input type="file" asp-for="Image" class="custom-file-input" id="customFile" />
+                    <label class="custom-file-label" for="customFile">Выберите файл</label>
+                </div>
             </div>
             <div class="form-group">
                 <label asp-for="RadioComponent.RadioComponentGroupId" class="control-label"></label>
-                <select asp-for="RadioComponent.RadioComponentGroupId" class ="form-control" asp-items="ViewBag.RadioComponentGroupId"></select>
+                <select asp-for="RadioComponent.RadioComponentGroupId" class="form-control" asp-items="ViewBag.RadioComponentGroupId"></select>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
@@ -47,4 +49,12 @@
 <div>
     <a asp-page="Index">Back to List</a>
 </div>
+
+@section Scripts
+{
+    <script src="~/js/bs-custom-file-input.js"></script>
+    <script>
+        bsCustomFileInput.init();
+    </script>
+}
 
