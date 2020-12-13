@@ -5,7 +5,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using WebAlexeev90321.DAL.Entities;
 using WebAlexeev90321.Models;
+using WebAlexeev90321.Extensions;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+
 
 namespace WebAlexeev90321.Controllers
 {
@@ -20,6 +23,9 @@ namespace WebAlexeev90321.Controllers
             _pageSize = 3;
             SetupData();
         }
+        [Route("Catalog")]
+        [Route("Catalog/Page_{pageNo}")]
+      
         public IActionResult Index(int? group, int pageNo = 1)
         {
 
@@ -28,7 +34,14 @@ namespace WebAlexeev90321.Controllers
             ViewData["Groups"] = _radioComponentGroups;
             // Получить id текущей группы и поместить в TempData
             ViewData["CurrentGroup"] = group ?? 0;
-            return View(ListViewModel<RadioComponent>.GetModel(radioComponentsFiltered, pageNo, _pageSize));
+         
+
+            var model = ListViewModel<RadioComponent>.GetModel(radioComponentsFiltered, pageNo,_pageSize);
+            if (Request.IsAjaxRequest())
+                return PartialView("_listpartial", model);
+            else
+                return View(model);
+
         }
         /// <summary>
         /// Инициализация списков

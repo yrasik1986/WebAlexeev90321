@@ -175,3 +175,4 @@ d:\develop\WebAlexeev90321\WebAlexeev90321\obj\Debug\netcoreapp3.1\WebAlexeev903
 d:\develop\WebAlexeev90321\WebAlexeev90321\obj\Debug\netcoreapp3.1\WebAlexeev90321.dll
 d:\develop\WebAlexeev90321\WebAlexeev90321\obj\Debug\netcoreapp3.1\WebAlexeev90321.pdb
 d:\develop\WebAlexeev90321\WebAlexeev90321\obj\Debug\netcoreapp3.1\WebAlexeev90321.genruntimeconfig.cache
+d:\develop\WebAlexeev90321\WebAlexeev90321\obj\Debug\netcoreapp3.1\Razor\Views\Product\_ListPartial.cshtml.g.cs

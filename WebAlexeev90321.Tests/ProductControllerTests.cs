@@ -4,6 +4,8 @@ using System.Text;
 using Microsoft.AspNetCore.Mvc;
 using WebAlexeev90321.Controllers;
 using WebAlexeev90321.DAL.Entities;
+using Moq;
+using Microsoft.AspNetCore.Http;
 using Xunit;
 
 
@@ -29,6 +31,15 @@ namespace WebAlexeev90321.Tests
         [Fact]
         public void ControllerSelectsGroup()
         {
+            // arrange
+            // Контекст контроллера
+            var controllerContext = new ControllerContext();
+            // Макет HttpContext
+            var moqHttpContext = new Mock<HttpContext>();
+            moqHttpContext.Setup(c => c.Request.Headers)
+            .Returns(new HeaderDictionary());
+            controllerContext.HttpContext = moqHttpContext.Object;
+
             // arrange
             var controller = new ProductController();
             var data = TestData.GetRadioComponentsList();
