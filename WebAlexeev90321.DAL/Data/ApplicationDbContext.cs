@@ -10,6 +10,9 @@ namespace WebAlexeev90321.DAL.Data
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<RadioComponent> RadioComponents { get; set; }
+        public DbSet<RadioComponentGroup> RadioComponentGroups { get; set; }
+
         public
        ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
         : base(options)
