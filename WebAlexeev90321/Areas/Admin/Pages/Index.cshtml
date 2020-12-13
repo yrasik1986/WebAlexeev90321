@@ -1,0 +1,60 @@
+﻿@page
+@model WebAlexeev90321.Areas.Admin.Pages.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.RadioComponent[0].RadioComponentName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RadioComponent[0].Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RadioComponent[0].Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RadioComponent[0].Image)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RadioComponent[0].Group)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.RadioComponent) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.RadioComponentName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Image)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Group.RadioComponentGroupId)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.RadioComponentId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.RadioComponentId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.RadioComponentId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
