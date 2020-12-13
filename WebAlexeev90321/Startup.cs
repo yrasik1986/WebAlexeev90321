@@ -8,12 +8,19 @@ using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
-using WebAlexeev90321.DAL.Data;
-using WebAlexeev90321.DAL.Entities;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using WebAlexeev90321.DAL.Data;
+using WebAlexeev90321.DAL.Entities;
 using WebAlexeev90321.Services;
+using System.Net.Security;
+using Microsoft.AspNetCore.Http;
+using WebAlexeev90321.Models;
+using Serilog.Extensions.Logging;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions;
+using Microsoft.AspNetCore.Mvc;
 
 namespace WebAlexeev90321
 {
@@ -29,9 +36,17 @@ namespace WebAlexeev90321
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ApplicationDbContext>(opt => {
-                opt.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
+            services.AddDistributedMemoryCache();
+            services.AddSession(opt =>
+            {
+                opt.Cookie.HttpOnly = true;
+                opt.Cookie.IsEssential = true;
             });
+
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+            services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseSqlServer(
+                    Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddIdentity<ApplicationUser, IdentityRole>(options =>
             {
@@ -41,19 +56,36 @@ namespace WebAlexeev90321
                 options.Password.RequireUppercase = false;
                 options.Password.RequireDigit = false;
             }).AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
+
             services.AddControllersWithViews();
             services.AddRazorPages();
+
+            services.AddDistributedMemoryCache();
+            services.AddSession(opt =>
+            {
+                opt.Cookie.HttpOnly = true;
+                opt.Cookie.IsEssential = true;
+            });
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddScoped<Cart>(sp => CartService.GetCart(sp));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ApplicationDbContext context,
-        UserManager<ApplicationUser> userManager,
-        RoleManager<IdentityRole> roleManager)
+        public void Configure(IApplicationBuilder app,
+                              IWebHostEnvironment env,
+                              ApplicationDbContext context,
+                              UserManager<ApplicationUser> userManager,
+                              RoleManager<IdentityRole> roleManager)//,
+                             // ILoggerFactory logger)
         {
+            DbInitializer.Seed(context, userManager, roleManager).GetAwaiter().GetResult();
+
+           // logger.AddFile("Logs/log-{Date}.txt");
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                //app.UseDatabaseErrorPage();
+                app.UseDatabaseErrorPage();
             }
             else
             {
@@ -66,9 +98,13 @@ namespace WebAlexeev90321
 
             app.UseRouting();
 
+
+
             app.UseAuthentication();
+            app.UseSession();
+           // app.UseFileLogging();
             app.UseAuthorization();
-            DbInitializer.Seed(context, userManager, roleManager).GetAwaiter().GetResult();
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
@@ -76,7 +112,6 @@ namespace WebAlexeev90321
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
-
         }
     }
 }

@@ -23,14 +23,14 @@ namespace WebAlexeev90321.Controllers
         {
             var user = await _userManager.GetUserAsync(User);
             if (user.AvatarImage != null)
-                return File(user.AvatarImage, "image/...");
+                return File(user.AvatarImage, "images/...");
             else
             {
-                var avatarPath = "/Images/anonymous.png";
+                var avatarPath = "/Images/avatar.png";
 
                 return File(_env.WebRootFileProvider
                 .GetFileInfo(avatarPath)
-               .CreateReadStream(), "image/...");
+               .CreateReadStream(), "images/...");
             }
         }
 
