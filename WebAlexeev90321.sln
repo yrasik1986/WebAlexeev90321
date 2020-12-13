@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAlexeev90321", "WebAlexe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAlexeev90321.DAL", "WebAlexeev90321.DAL\WebAlexeev90321.DAL.csproj", "{13A0791D-9ACB-45E3-B32F-D84C22A58678}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAlexeev90321.Tests", "WebAlexeev90321.Tests\WebAlexeev90321.Tests.csproj", "{A22D8E9C-8F2F-4DCB-A36E-0B12FC0BE7DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAlexeev90321.Tests", "WebAlexeev90321.Tests\WebAlexeev90321.Tests.csproj", "{A22D8E9C-8F2F-4DCB-A36E-0B12FC0BE7DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

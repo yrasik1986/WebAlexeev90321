@@ -21,6 +21,8 @@ using Serilog.Extensions.Logging;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions;
 using Microsoft.AspNetCore.Mvc;
+using WebAlexeev90321.Middleware;
+using WebAlexeev90321.Extensions;
 
 namespace WebAlexeev90321
 {
@@ -36,14 +38,15 @@ namespace WebAlexeev90321
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDistributedMemoryCache();
-            services.AddSession(opt =>
-            {
-                opt.Cookie.HttpOnly = true;
-                opt.Cookie.IsEssential = true;
-            });
+            //services.AddDistributedMemoryCache();
+            //services.AddSession(opt =>
+            //{
+            //    opt.Cookie.HttpOnly = true;
+            //    opt.Cookie.IsEssential = true;
+            //});
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+            //services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
@@ -75,12 +78,12 @@ namespace WebAlexeev90321
                               IWebHostEnvironment env,
                               ApplicationDbContext context,
                               UserManager<ApplicationUser> userManager,
-                              RoleManager<IdentityRole> roleManager)//,
-                             // ILoggerFactory logger)
+                              RoleManager<IdentityRole> roleManager,
+                              ILoggerFactory logger)
         {
             DbInitializer.Seed(context, userManager, roleManager).GetAwaiter().GetResult();
 
-           // logger.AddFile("Logs/log-{Date}.txt");
+            logger.AddFile("Logs/log-{Date}.txt");
 
             if (env.IsDevelopment())
             {
@@ -102,7 +105,7 @@ namespace WebAlexeev90321
 
             app.UseAuthentication();
             app.UseSession();
-           // app.UseFileLogging();
+            app.UseFileLogging();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

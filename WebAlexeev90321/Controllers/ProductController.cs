@@ -19,12 +19,14 @@ namespace WebAlexeev90321.Controllers
         // public List<RadioComponent> _radioComponents;
         // List<RadioComponentGroup> _radioComponentGroups;
         ApplicationDbContext _context;
+        private ILogger _logger;
         int _pageSize;
 
-        public ProductController(ApplicationDbContext context)
+        public ProductController(ApplicationDbContext context, ILogger<ProductController> logger)
         {
             _pageSize = 3;
             _context = context;
+            _logger = logger;
         }
 
         [Route("Catalog")]
@@ -32,6 +34,10 @@ namespace WebAlexeev90321.Controllers
       
         public IActionResult Index(int? group, int pageNo = 1)
         {
+
+            // логирование
+           // var groupName = group.HasValue? _context.RadioComponentGroups.Find(group.Value)?.GroupName: "all groups";
+          // _logger.LogInformation($"info: group = {groupName}, page={pageNo}");
 
             // Поместить список групп во ViewData
             var radioComponentsFiltered = _context.RadioComponents.Where(d => !group.HasValue || d.RadioComponentGroupId == group.Value);
