@@ -1,9 +1,0 @@
-d:\develop\WebAlexeev90321\WebAlexeev90321.DAL\bin\Debug\netcoreapp3.1\WebAlexeev90321.DAL.deps.json
-d:\develop\WebAlexeev90321\WebAlexeev90321.DAL\bin\Debug\netcoreapp3.1\WebAlexeev90321.DAL.dll
-d:\develop\WebAlexeev90321\WebAlexeev90321.DAL\bin\Debug\netcoreapp3.1\WebAlexeev90321.DAL.pdb
-d:\develop\WebAlexeev90321\WebAlexeev90321.DAL\obj\Debug\netcoreapp3.1\WebAlexeev90321.DAL.csprojAssemblyReference.cache
-d:\develop\WebAlexeev90321\WebAlexeev90321.DAL\obj\Debug\netcoreapp3.1\WebAlexeev90321.DAL.AssemblyInfoInputs.cache
-d:\develop\WebAlexeev90321\WebAlexeev90321.DAL\obj\Debug\netcoreapp3.1\WebAlexeev90321.DAL.AssemblyInfo.cs
-d:\develop\WebAlexeev90321\WebAlexeev90321.DAL\obj\Debug\netcoreapp3.1\WebAlexeev90321.DAL.csproj.CoreCompileInputs.cache
-d:\develop\WebAlexeev90321\WebAlexeev90321.DAL\obj\Debug\netcoreapp3.1\WebAlexeev90321.DAL.dll
-d:\develop\WebAlexeev90321\WebAlexeev90321.DAL\obj\Debug\netcoreapp3.1\WebAlexeev90321.DAL.pdb

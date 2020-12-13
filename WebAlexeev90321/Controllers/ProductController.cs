@@ -38,7 +38,8 @@ namespace WebAlexeev90321.Controllers
 
             var model = ListViewModel<RadioComponent>.GetModel(radioComponentsFiltered, pageNo,_pageSize);
             if (Request.IsAjaxRequest())
-                return PartialView("_listpartial", model);
+                return PartialView("_listpartial", model);
+
             else
                 return View(model);
 
