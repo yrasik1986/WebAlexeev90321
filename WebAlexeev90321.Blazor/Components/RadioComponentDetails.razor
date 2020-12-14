@@ -1,0 +1,25 @@
+﻿@using WebAlexeev90321.Blazor.Data
+@using WebAlexeev90321.Blazor.Components
+
+<h3>RadioComponentDetails</h3>
+
+@if (RadioComponent != null)
+{
+    <img src="@imageSrc" class="img-thumbnail" width="150" />
+    <div>
+        <p>@RadioComponent.RadioComponentName - @RadioComponent.Description</p>
+        <div class="badge badge-info ">@RadioComponent.Price цена</div>
+    </div>
+}
+@code {
+    [Parameter]
+    public RadioComponentDetailsViewModel RadioComponent { get; set; }
+    [Parameter]
+    public EventCallback<RadioComponentDetailsViewModel> RadioComponentChanged { get; set; }
+    string imageSrc {
+        get
+    {
+            return $"https://localhost:44351/images/{RadioComponent.Image}";
+        }
+    }
+}

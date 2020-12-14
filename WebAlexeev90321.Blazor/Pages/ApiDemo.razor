@@ -1,0 +1,28 @@
+﻿@page "/ApiDemo"
+@inject IHttpClientFactory clientFactory
+@using WebAlexeev90321.Blazor.Data
+@using WebAlexeev90321.Blazor.Components
+@using System.Text.Json
+
+<div class="container">
+    <RadioComponentsList @bind-RadioComponents="radioComponents"></RadioComponentsList>
+</div>
+@code {
+    [Parameter]
+    public IEnumerable<RadioComponentListViewModel> radioComponents { get; set; }
+
+    string apiBaseAddress = "https://localhost:44351/Api/RadioComponents";
+    protected override async Task OnInitializedAsync()
+    {
+        var request = new HttpRequestMessage(HttpMethod.Get, apiBaseAddress);
+        var client = clientFactory.CreateClient();
+        var response = await client.SendAsync(request);//client.GetAsync(apiBaseAddress);
+        if (response.IsSuccessStatusCode)
+        {
+            using var responseStream = await response.Content.ReadAsStreamAsync();
+            radioComponents = await JsonSerializer.DeserializeAsync<IEnumerable<RadioComponentListViewModel>>
+       (responseStream,
+       new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+        }
+    }
+}
