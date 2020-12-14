@@ -1,4 +1,4 @@
-﻿@page "/ApiDemo"
+﻿@page "/apidemo"
 @inject IHttpClientFactory clientFactory
 @using WebAlexeev90321.Blazor.Data
 @using WebAlexeev90321.Blazor.Components
@@ -11,7 +11,7 @@
     [Parameter]
     public IEnumerable<RadioComponentListViewModel> radioComponents { get; set; }
 
-    string apiBaseAddress = "https://localhost:44351/Api/RadioComponents";
+    string apiBaseAddress = "https://localhost:44380/Api/RadioComponents";
     protected override async Task OnInitializedAsync()
     {
         var request = new HttpRequestMessage(HttpMethod.Get, apiBaseAddress);
