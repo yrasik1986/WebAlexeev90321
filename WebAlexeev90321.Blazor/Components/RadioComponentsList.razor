@@ -1,4 +1,5 @@
 ﻿@using WebAlexeev90321.Blazor.Data
+
 <h3>RadioComponentsList</h3>
 
 @if (RadioComponents == null)
@@ -12,7 +13,10 @@ else
             var i = 1;
             foreach (var dish in RadioComponents)
             {
-                <button type="button" class="list-group-item list-group-item-action">
+                <button type="button"
+                        class="list-group-item list-group-item-action
+                    @(SelectedId == dish.RadioComponentId ? "active" : "")"
+                    @onclick="@(e => Selected(e, dish.RadioComponentId))">
                     @(i++) - @dish.RadioComponentName
                 </button>
             }
@@ -24,4 +28,12 @@ else
     public IEnumerable<RadioComponentListViewModel> RadioComponents { get; set; }
     [Parameter]
     public EventCallback<IEnumerable<RadioComponentListViewModel>> RadioComponentsChanged { get; set; }
+    private int SelectedId = 0;
+    [Parameter]
+    public EventCallback<int> SelectedObjectChanged { get; set; }
+    private void Selected(MouseEventArgs e, int id)
+    {
+        SelectedId = id;
+        SelectedObjectChanged.InvokeAsync(id);
+    }
 }

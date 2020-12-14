@@ -5,8 +5,11 @@
 @using System.Text.Json
 
 <div class="container">
-    <RadioComponentsList @bind-RadioComponents="radioComponents"></RadioComponentsList>
+    <RadioComponentsList @bind-RadioComponents="radioComponents" SelectedObjectChanged="ShowDetails">></RadioComponentsList>
+    <RadioComponentDetails @bind-RadioComponent="SelectedDish"></RadioComponentDetails>
 </div>
+
+
 @code {
     [Parameter]
     public IEnumerable<RadioComponentListViewModel> radioComponents { get; set; }
@@ -23,6 +26,20 @@
             radioComponents = await JsonSerializer.DeserializeAsync<IEnumerable<RadioComponentListViewModel>>
        (responseStream,
        new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+        }
+    }
+
+    [Parameter]
+    public RadioComponentDetailsViewModel SelectedDish { get; set; }
+    private async Task ShowDetails(int id)
+    {
+        var client = clientFactory.CreateClient();
+        var response = await client.GetAsync(apiBaseAddress + $"/{id}");
+        if (response.IsSuccessStatusCode)
+        {
+            using var responseStream = await response.Content.ReadAsStreamAsync();
+            SelectedDish = await
+           JsonSerializer.DeserializeAsync<RadioComponentDetailsViewModel>(responseStream);
         }
     }
 }
